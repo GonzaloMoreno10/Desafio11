@@ -1,0 +1,23 @@
+html 
+  link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous")
+  head
+  body
+    div(style="padding:20px").container
+        a(href="/api/productos/guardar").btn.btn-primary Nuevo producto
+    div.container
+        if products
+            table( tyle="text-align:center").table
+                tr
+                    th title 
+                    th price 
+                    th thumbnail
+                tr
+                each p in products
+                    tr
+                        td #{p.title}
+                        td #{p.price}
+                        td 
+                           img(src="#{p.thumbnail}")
+                    tr
+        else 
+            h1 No existen productos

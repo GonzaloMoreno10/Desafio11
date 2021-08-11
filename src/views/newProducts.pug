@@ -1,0 +1,16 @@
+html 
+  head 
+    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous")
+    body
+        br
+        br
+        div(class="col-md-4 mx-auto")
+            form(action="/api/productos/guardar" method="post" class="form-control")
+                input(type="text" class="form-control" name="title" placeholder="title")
+                br
+                input(type="text" class="form-control" name="price" placeholder="price")
+                br
+                input(type="text" class="form-control" name="thumbnail" placeholder="thumbnail")
+                br
+                input(type="submit" class="btn btn-block btn-primary"  value="Create")
+
