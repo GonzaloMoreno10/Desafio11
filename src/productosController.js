@@ -34,10 +34,7 @@ Router.get("/vista", async (req, res) => {
     try {
         let products = await archivo.getProductos();  
         if(products.length > 0){
-            res.render("allProducts",{products});
-        }
-        else{
-            res.render("allProducts");
+            res.render("allProducts",products);
         }
         
     }

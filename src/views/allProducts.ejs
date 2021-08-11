@@ -1,0 +1,43 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous"/>
+</head>
+
+<body>
+  <div>
+    <br>
+    <br>
+    <div class="container">
+        <a href="/api/productos/guardar" class="btn btn-primary" >Nuevo Producto</a>
+    <br>
+    <br>
+    <h1>Products</h1>
+
+      <% if(products) { %>
+        <table class="table">
+            <tr>
+              <th>title</th>
+              <th>price</th>
+              <th>thumbnail</th>
+            </tr>
+            <% products.forEach(item=> { %>
+              <tr>
+                 <td><%= item.title %></td>
+                 <td><%= item.price %></td>
+                 <td><img src="<%= item.thumbnail %>"width="50px" height="50px"></td>
+              </tr>
+              <% }) %>
+        </table>
+        <% } else { %>
+          <h4>No existen productos</h4>
+          <% } %>
+    </div>
+    
+  </div>
+
+</body>
+
+</html>
